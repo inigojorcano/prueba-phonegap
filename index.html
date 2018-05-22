@@ -17,12 +17,12 @@
 			function battery() {
 				alert("hola");
 			    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
-
-			    window.addEventListener("batterystatus", onBatteryStatus, false);
-				function onBatteryStatus(status) {
-				    document.getElementById("batteryBody").innerHTML += "Level: " + status.level + " isPlugged: " + status.isPlugged + "<br/>";
-				}
+			}
+			window.addEventListener("batterystatus", onBatteryStatus, false);
+			function onBatteryStatus(status) {
+			    document.getElementById("batteryBody").innerHTML += "Level: " + status.level + " isPlugged: " + status.isPlugged + "<br/>";
 			}
 		</script>
 	</body>
 </html>
+
