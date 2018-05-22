@@ -12,4 +12,6 @@
         <access origin="*" />
         <plugin name="cordova-plugin-battery-status" spec="~2.0.2" />
         <plugin name="cordova-plugin-vibration" spec="~3.1.0" />
+        <plugin name="cordova-plugin-statusbar" spec="~2.4.2" />
+        <preference name="StatusBarBackgroundColor" value="#FF00FF" />
     </widget>
