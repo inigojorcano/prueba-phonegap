@@ -16,12 +16,18 @@
 			document.getElementById("battery").addEventListener("click", battery);
 			function battery() {
 				alert("hola bebe");
-			    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+				navigator.vibrate(3000);
+			    document.getElementById("batteryBody").innerHTML += "YOU CLICKED ME!";
 			}
 			window.addEventListener("batterystatus", onBatteryStatus, false);
 			function onBatteryStatus(status) {
 			    document.getElementById("batteryBody").innerHTML += "Level: " + status.level + " isPlugged: " + status.isPlugged + "<br/>";
 			}
+
+			document.addEventListener("deviceready", onDeviceReady, false);
+				function onDeviceReady() {
+				    navigator.vibrate(3000);
+				}
 		</script>
 	</body>
 </html>
