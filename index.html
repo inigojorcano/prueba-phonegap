@@ -9,16 +9,19 @@
 	<body class="is-loading">
 		<h1>Hola Mundo</h1>
 		<button id="battery">battery</button>
+		<div id="batteryBody">
+			hola
+		</div>
 		<script type="text/javascript">
 			document.getElementById("battery").addEventListener("click", battery);
-
+			document.getElementById("battery").innerHTML += 
 			function battery() {
 				alert("hola");
 			    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
 
 			    window.addEventListener("batterystatus", onBatteryStatus, false);
 				function onBatteryStatus(status) {
-				    alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
+				    document.getElementById("batteryBody").innerHTML += "Level: " + status.level + " isPlugged: " + status.isPlugged + "<br/>";
 				}
 			}
 		</script>
