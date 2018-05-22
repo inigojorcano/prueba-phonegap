@@ -4,15 +4,22 @@
 		<title></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="cordova.js"></script>
 	</head>
 	<body class="is-loading">
 		<h1>Hola Mundo</h1>
-		
+		<button id="battery">battery</button>
 		<script type="text/javascript">
-			window.addEventListener("batterystatus", onBatteryStatus, false);
+			document.getElementById("battery").addEventListener("click", battery);
 
-			function onBatteryStatus(status) {
-			    alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
+			function battery() {
+				alert("hola");
+			    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+
+			    window.addEventListener("batterystatus", onBatteryStatus, false);
+				function onBatteryStatus(status) {
+				    alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
+				}
 			}
 		</script>
 	</body>
