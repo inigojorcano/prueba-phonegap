@@ -8,26 +8,21 @@
 	</head>
 	<body class="is-loading">
 		<h1>Hola Mundo</h1>
-		<button id="battery">battery</button>
-		<div id="batteryBody">
+		<button id="button">pulsa</button>
+		<div id="body">
 			hola
 		</div>
 		<script type="text/javascript">
-			document.getElementById("battery").addEventListener("click", battery);
+			document.getElementById("button").addEventListener("click", battery);
 			function battery() {
-				alert("hola bebe");
-				navigator.vibrate(3000);
-			    document.getElementById("batteryBody").innerHTML += "YOU CLICKED ME!";
-			}
-			window.addEventListener("batterystatus", onBatteryStatus, false);
-			function onBatteryStatus(status) {
-			    document.getElementById("batteryBody").innerHTML += "Level: " + status.level + " isPlugged: " + status.isPlugged + "<br/>";
-			}
-
-			document.addEventListener("deviceready", onDeviceReady, false);
-				function onDeviceReady() {
-				    navigator.vibrate(3000);
+				//alert("hola bebe");
+				//navigator.vibrate(3000);
+				for (var i = 0; i < 100; i--) {
+					navigator.vibrate((i*10);
 				}
+			    document.getElementById("body").innerHTML += "YOU CLICKED ME!";
+			}
 		</script>
 	</body>
 </html>
+
